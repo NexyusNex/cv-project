@@ -32,6 +32,29 @@
   padding-bottom: 10px;
 }
 
+.input-container input {
+  height: 25px;
+  border-radius: 8px;
+  outline-style: none;
+  border: 2px solid #dbdbdb;
+  box-shadow: 0px 0px 15px #afd2df;
+  transition: box-shadow 300ms ease;
+  transition: border 300ms ease;
+}
+
+.input-container input:hover {
+  border: 2px solid #164e63;
+  box-shadow: 0px 0px 15px #164e6386;
+}
+
+.personal-input {
+  display: flex;
+  flex-direction: column;
+  color: #164e63;
+  width: 100%;
+  gap: 4px;
+}
+
 .info-container {
   display: flex;
   justify-content: center;
