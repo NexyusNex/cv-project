@@ -20,11 +20,16 @@
 
 .input-container {
   display: flex;
+  padding: 12px;
   background-color: #ecfeff;
   border-radius: 12px;
   color: #164e63;
   flex-direction: column;
   align-items: center;
+}
+
+.input-container h1 {
+  padding-bottom: 10px;
 }
 
 .info-container {
