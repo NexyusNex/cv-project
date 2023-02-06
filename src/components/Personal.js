@@ -1,4 +1,6 @@
 import React from "react";
+import phone from "../phone.svg";
+import email from "../email.svg";
 
 class Personal extends React.Component {
   constructor(props) {
@@ -7,11 +9,20 @@ class Personal extends React.Component {
 
   render() {
     return (
-      <div>
-        <p>{this.props.CV.Fname}</p>
-        <p>{this.props.CV.Lname}</p>
-        <p>{this.props.CV.email}</p>
-        <p>{this.props.CV.tel}</p>
+      <div className="personal-info">
+        <h1>
+          {this.props.CV.Fname} {this.props.CV.Lname}
+        </h1>
+        <div>
+          <p>
+            <img src={email} alt="email"></img>
+            {this.props.CV.email}
+          </p>
+          <p>
+            <img src={phone} alt="phone"></img>
+            {this.props.CV.tel}
+          </p>
+        </div>
       </div>
     );
   }

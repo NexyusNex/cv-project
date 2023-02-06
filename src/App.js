@@ -1,13 +1,12 @@
 import React from "react";
 import Personal from "./components/Personal";
+import phone from "./phone.svg";
 
 class App extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      Fname: "",
-      Lname: "",
       CV: {
         Fname: "",
         Lname: "",
@@ -84,7 +83,6 @@ class App extends React.Component {
           <button>Submit</button>
         </div>
         <div className="info-container">
-          <h1>Info:</h1>
           <Personal CV={CV}></Personal>
         </div>
       </form>
