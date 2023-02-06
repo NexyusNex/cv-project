@@ -1,6 +1,5 @@
 import React from "react";
 import Personal from "./components/Personal";
-import phone from "./phone.svg";
 
 class App extends React.Component {
   constructor(props) {
@@ -79,6 +78,28 @@ class App extends React.Component {
               placeholder="0612356163"
               onChange={this.handleChange}
             ></input>
+          </div>
+
+          <div className="education-input">
+            <h2>Education:</h2>
+            <label htmlFor="school">School:</label>
+            <input
+              type="text"
+              id="school"
+              name="school"
+              placeholder="School name"
+            ></input>
+            <label htmlFor="study">Title of study:</label>
+            <input
+              type="text"
+              id="study"
+              name="study"
+              placeholder="School title of study"
+            ></input>
+            <label htmlFor="datefrom">Date from:</label>
+            <input type="date" id="datefrom" name="datefrom"></input>
+            <label htmlFor="dateto">Date to:</label>
+            <input type="date" id="dateto" name="dateto"></input>
           </div>
           <button>Submit</button>
         </div>
