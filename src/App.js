@@ -34,6 +34,33 @@ class App extends React.Component {
     this.ApplyInfo = this.ApplyInfo.bind(this);
   }
 
+  displayPersonal() {
+    const personal = document.querySelector(".personal-input");
+    if (personal.style.display !== "flex") {
+      personal.style.display = "flex";
+    } else {
+      personal.style.display = "none";
+    }
+  }
+
+  displayEducation() {
+    const education = document.querySelector(".education-input");
+    if (education.style.display !== "flex") {
+      education.style.display = "flex";
+    } else {
+      education.style.display = "none";
+    }
+  }
+
+  displayExperience() {
+    const experience = document.querySelector(".experience-input");
+    if (experience.style.display !== "flex") {
+      experience.style.display = "flex";
+    } else {
+      experience.style.display = "none";
+    }
+  }
+
   handleChange(e) {
     this.setState({
       [e.target.name]: e.target.value,
@@ -71,9 +98,13 @@ class App extends React.Component {
       <form className="container" onSubmit={this.ApplyInfo}>
         <div className="input-container">
           <h1>CV Application</h1>
-
-          <div className="personal-input">
+          <div className="title">
             <h2>Personal details:</h2>
+            <button className="hide" onClick={this.displayPersonal}>
+              +
+            </button>
+          </div>
+          <div className="personal-input">
             <label htmlFor="Fname">First name:</label>
             <input
               type="text"
@@ -115,10 +146,13 @@ class App extends React.Component {
               onChange={this.handleChange}
             ></textarea>
           </div>
-
-          <div className="education-input">
+          <div className="title">
             <h2>Education:</h2>
-
+            <button className="hide" onClick={this.displayEducation}>
+              +
+            </button>
+          </div>
+          <div className="education-input">
             <label htmlFor="school">School:</label>
             <input
               type="text"
@@ -150,9 +184,13 @@ class App extends React.Component {
               onChange={this.handleChange}
             ></input>
           </div>
-
-          <div className="experience-input">
+          <div className="title">
             <h2>Experience:</h2>
+            <button className="hide" onClick={this.displayExperience}>
+              +
+            </button>
+          </div>
+          <div className="experience-input">
             <label htmlFor="companyname">Company name:</label>
             <input
               type="text"

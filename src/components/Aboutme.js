@@ -5,7 +5,10 @@ class Aboutme extends React.Component {
     return (
       <div className="about-me">
         <h1>About me:</h1>
-        <p>{this.props.Pinfo.aboutme}</p>
+        <p>
+          <h3>-</h3>
+          {this.props.Pinfo.aboutme}
+        </p>
       </div>
     );
   }
