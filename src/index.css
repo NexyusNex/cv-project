@@ -76,7 +76,8 @@
   background-color: #155e75;
 }
 
-.personal-input {
+.personal-input,
+.education-input {
   display: flex;
   flex-direction: column;
   color: #164e63;

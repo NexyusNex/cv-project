@@ -1,16 +1,23 @@
 import React from "react";
 import Personal from "./components/Personal";
+import Education from "./components/Education";
 
 class App extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      CV: {
+      Pinfo: {
         Fname: "",
         Lname: "",
         email: "",
         tel: "",
+      },
+      Einfo: {
+        school: "",
+        study: "",
+        datefrom: "",
+        dateto: "",
       },
     };
 
@@ -27,18 +34,23 @@ class App extends React.Component {
   ApplyInfo(e) {
     e.preventDefault();
     this.setState({
-      CV: {
+      Pinfo: {
         Fname: this.state.Fname,
         Lname: this.state.Lname,
         email: this.state.email,
         tel: this.state.tel,
       },
+      Einfo: {
+        school: this.state.school,
+        study: this.state.study,
+        datefrom: this.state.datefrom,
+        dateto: this.state.dateto,
+      },
     });
   }
 
   render() {
-    const { CV } = this.state;
-    console.log(this.state.Fname);
+    const { Pinfo, Einfo } = this.state;
     return (
       <form className="container" onSubmit={this.ApplyInfo}>
         <div className="input-container">
@@ -82,12 +94,14 @@ class App extends React.Component {
 
           <div className="education-input">
             <h2>Education:</h2>
+
             <label htmlFor="school">School:</label>
             <input
               type="text"
               id="school"
               name="school"
               placeholder="School name"
+              onChange={this.handleChange}
             ></input>
             <label htmlFor="study">Title of study:</label>
             <input
@@ -95,16 +109,28 @@ class App extends React.Component {
               id="study"
               name="study"
               placeholder="School title of study"
+              onChange={this.handleChange}
             ></input>
             <label htmlFor="datefrom">Date from:</label>
-            <input type="date" id="datefrom" name="datefrom"></input>
+            <input
+              type="date"
+              id="datefrom"
+              name="datefrom"
+              onChange={this.handleChange}
+            ></input>
             <label htmlFor="dateto">Date to:</label>
-            <input type="date" id="dateto" name="dateto"></input>
+            <input
+              type="date"
+              id="dateto"
+              name="dateto"
+              onChange={this.handleChange}
+            ></input>
           </div>
           <button>Submit</button>
         </div>
         <div className="info-container">
-          <Personal CV={CV}></Personal>
+          <Personal Pinfo={Pinfo}></Personal>
+          <Education Einfo={Einfo}></Education>
         </div>
       </form>
     );
