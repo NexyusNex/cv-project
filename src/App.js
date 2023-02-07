@@ -2,6 +2,7 @@ import React from "react";
 import Personal from "./components/Personal";
 import Education from "./components/Education";
 import Experience from "./components/Experience";
+import Aboutme from "./components/Aboutme";
 
 class App extends React.Component {
   constructor(props) {
@@ -13,6 +14,7 @@ class App extends React.Component {
         Lname: "",
         email: "",
         tel: "",
+        aboutme: "",
       },
       Einfo: {
         school: "",
@@ -46,6 +48,7 @@ class App extends React.Component {
         Lname: this.state.Lname,
         email: this.state.email,
         tel: this.state.tel,
+        aboutme: this.state.aboutme,
       },
       Einfo: {
         school: this.state.school,
@@ -185,6 +188,7 @@ class App extends React.Component {
         </div>
         <div className="info-container">
           <Personal Pinfo={Pinfo}></Personal>
+          <Aboutme Pinfo={Pinfo}></Aboutme>
           <Education Einfo={Einfo}></Education>
           <Experience Expinfo={Expinfo}></Experience>
         </div>

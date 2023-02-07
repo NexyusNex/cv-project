@@ -143,14 +143,22 @@
 }
 
 .education-info,
-.experience-info {
+.experience-info,
+.about-me {
   padding: 0 24px;
 }
 
 .education-info h1,
-.experience-info h1 {
+.experience-info h1,
+.about-me h1 {
   border-bottom: 1px solid #313131;
   padding: 12px 0;
+}
+
+.about-me p {
+  min-width: 100px;
+  max-width: 500px;
+  word-wrap: break-word;
 }
 
 .school-card,
