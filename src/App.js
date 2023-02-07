@@ -20,7 +20,12 @@ class App extends React.Component {
         datefrom: "",
         dateto: "",
       },
-      Expinfo: {},
+      Expinfo: {
+        companyname: "",
+        position: "",
+        cdatefrom: "",
+        cdateto: "",
+      },
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -48,11 +53,17 @@ class App extends React.Component {
         datefrom: this.state.datefrom,
         dateto: this.state.dateto,
       },
+      Expinfo: {
+        companyname: this.state.companyname,
+        position: this.state.position,
+        cdatefrom: this.state.cdatefrom,
+        cdateto: this.state.cdateto,
+      },
     });
   }
 
   render() {
-    const { Pinfo, Einfo } = this.state;
+    const { Pinfo, Einfo, Expinfo } = this.state;
     return (
       <form className="container" onSubmit={this.ApplyInfo}>
         <div className="input-container">
@@ -131,21 +142,43 @@ class App extends React.Component {
 
           <div className="experience-input">
             <h2>Experience:</h2>
-            <label htmlFor="">Company name:</label>
-            <input></input>
-            <label htmlFor="">Position:</label>
-            <input></input>
+            <label htmlFor="companyname">Company name:</label>
+            <input
+              type="text"
+              id="companyname"
+              name="companyname"
+              placeholder="Company name"
+              onChange={this.handleChange}
+            ></input>
+            <label htmlFor="position">Position:</label>
+            <input
+              type="text"
+              id="position"
+              name="position"
+              placeholder="Position"
+              onChange={this.handleChange}
+            ></input>
             <label htmlFor="">Date from:</label>
-            <input></input>
+            <input
+              type="date"
+              id="cdatefrom"
+              name="cdatefrom"
+              onChange={this.handleChange}
+            ></input>
             <label htmlFor="">Date to:</label>
-            <input></input>
+            <input
+              type="date"
+              id="cdateto"
+              name="cdateto"
+              onChange={this.handleChange}
+            ></input>
           </div>
           <button>Submit</button>
         </div>
         <div className="info-container">
           <Personal Pinfo={Pinfo}></Personal>
           <Education Einfo={Einfo}></Education>
-          <Experience></Experience>
+          <Experience Expinfo={Expinfo}></Experience>
         </div>
       </form>
     );

@@ -131,16 +131,19 @@
   margin: 8px;
 }
 
-.education-info {
+.education-info,
+.experience-info {
   padding: 0 24px;
 }
 
-.education-info h1 {
+.education-info h1,
+.experience-info h1 {
   border-bottom: 1px solid #313131;
   padding: 12px 0;
 }
 
-.school-card {
+.school-card,
+.exp-card {
   margin-top: 12px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
