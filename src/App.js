@@ -103,6 +103,14 @@ class App extends React.Component {
               placeholder="0612356163"
               onChange={this.handleChange}
             ></input>
+            <label htmlFor="aboutme">About me:</label>
+            <textarea
+              type="text"
+              id="aboutme"
+              name="aboutme"
+              placeholder="About me..."
+              onChange={this.handleChange}
+            ></textarea>
           </div>
 
           <div className="education-input">

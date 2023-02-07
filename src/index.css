@@ -66,7 +66,8 @@
   margin: 12px 0;
 }
 
-.input-container input:hover {
+.input-container input:hover,
+.input-container textarea:hover {
   border: 2px solid #164e63;
   box-shadow: 0px 0px 15px #164e6386;
 }
@@ -94,6 +95,16 @@
 .input-container button:active {
   box-shadow: 0px 0px 8px 155e75;
   background-color: #155e75;
+}
+
+.input-container textarea {
+  height: 50px;
+  resize: none;
+  border: 2px solid #dbdbdb;
+  border-radius: 12px;
+  outline: none;
+  transition: box-shadow 300ms ease;
+  transition: border 300ms ease;
 }
 
 .personal-input,
