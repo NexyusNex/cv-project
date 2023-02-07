@@ -94,7 +94,7 @@
 
 .personal-info {
   display: flex;
-  background-color: rgb(49, 49, 49);
+  background-color: #313131;
   border-radius: 10px 10px 0 0;
   color: white;
   height: 140px;
@@ -108,4 +108,19 @@
   align-items: center;
   gap: 8px;
   margin: 8px;
+}
+
+.education-info {
+  padding: 0 24px;
+}
+
+.education-info h1 {
+  border-bottom: 1px solid #313131;
+  padding: 12px 0;
+}
+
+.school-card {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
