@@ -27,6 +27,7 @@
   color: #164e63;
   flex-direction: column;
   align-items: center;
+  overflow-y: auto;
 }
 
 .input-container h1 {
@@ -60,9 +61,10 @@
   color: #ecfeff;
   font-size: 16px;
   border: none;
-  margin-top: auto;
+  margin-top: 12px;
   transition: box-shadow 200ms ease;
   transition: background-color 200ms ease;
+  flex-shrink: 0;
 }
 
 .input-container button:hover {
@@ -77,7 +79,8 @@
 }
 
 .personal-input,
-.education-input {
+.education-input,
+.experience-input {
   display: flex;
   flex-direction: column;
   color: #164e63;

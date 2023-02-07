@@ -1,6 +1,7 @@
 import React from "react";
 import Personal from "./components/Personal";
 import Education from "./components/Education";
+import Experience from "./components/Experience";
 
 class App extends React.Component {
   constructor(props) {
@@ -19,6 +20,7 @@ class App extends React.Component {
         datefrom: "",
         dateto: "",
       },
+      Expinfo: {},
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -126,11 +128,24 @@ class App extends React.Component {
               onChange={this.handleChange}
             ></input>
           </div>
+
+          <div className="experience-input">
+            <h2>Experience:</h2>
+            <label htmlFor="">Company name:</label>
+            <input></input>
+            <label htmlFor="">Position:</label>
+            <input></input>
+            <label htmlFor="">Date from:</label>
+            <input></input>
+            <label htmlFor="">Date to:</label>
+            <input></input>
+          </div>
           <button>Submit</button>
         </div>
         <div className="info-container">
           <Personal Pinfo={Pinfo}></Personal>
           <Education Einfo={Einfo}></Education>
+          <Experience></Experience>
         </div>
       </form>
     );

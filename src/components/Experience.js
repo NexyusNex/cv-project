@@ -1,3 +1,13 @@
 import React from "react";
 
-class Experience extends React.Component {}
+class Experience extends React.Component {
+  render() {
+    return (
+      <div className="experience-info">
+        <h2>Experience:</h2>
+      </div>
+    );
+  }
+}
+
+export default Experience;
