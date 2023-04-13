@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/cv-project/static/css/main.350c1902.css",
+    "main.css": "/cv-project/static/css/main.255b9b97.css",
     "main.js": "/cv-project/static/js/main.c57284c0.js",
     "static/media/OpenSans-Regular.ttf": "/cv-project/static/media/OpenSans-Regular.77c09223204154ae8d43.ttf",
     "index.html": "/cv-project/index.html",
     "static/media/phone.svg": "/cv-project/static/media/phone.af2900f0920f4ec38858ee5cd607f577.svg",
     "static/media/email.svg": "/cv-project/static/media/email.986da5cc21d52c9cd9b308ab65ed37ee.svg",
-    "main.350c1902.css.map": "/cv-project/static/css/main.350c1902.css.map",
+    "main.255b9b97.css.map": "/cv-project/static/css/main.255b9b97.css.map",
     "main.c57284c0.js.map": "/cv-project/static/js/main.c57284c0.js.map"
   },
   "entrypoints": [
-    "static/css/main.350c1902.css",
+    "static/css/main.255b9b97.css",
     "static/js/main.c57284c0.js"
   ]
 }
